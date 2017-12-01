@@ -38,16 +38,18 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/editText3"
+        android:id="@+id/numberInput"
         android:layout_below="@+id/editText2"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:hint="Enter number here" />
 
     <Button
         android:text="Guess"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText3"
+        android:layout_below="@+id/numberInput"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="26dp"
-        android:id="@+id/guessButton" />
+        android:id="@+id/guessButton"
+        android:onClick="guess" />
 </RelativeLayout>
