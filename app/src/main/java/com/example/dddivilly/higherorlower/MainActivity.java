@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
         Random rand = new Random();
 
-        int randomNumber = rand.nextInt(20) + 1;
+        int randNumber = rand.nextInt(20) + 1;
 
 
         EditText numberInput = (EditText) findViewById(R.id.numberInput);
@@ -24,10 +24,22 @@ public class MainActivity extends AppCompatActivity {
         int number = Integer.parseInt(value);
 
 
-        Toast.makeText(MainActivity.this, "Toasts working", Toast.LENGTH_LONG).show();
+        if (number > randNumber){
+
+            Toast.makeText(MainActivity.this, "Too high!", Toast.LENGTH_LONG).show();
+
+        } else if (number < randNumber){
+
+            Toast.makeText(MainActivity.this, "Too low!", Toast.LENGTH_LONG).show();
+
+        } else {
+
+            Toast.makeText(MainActivity.this, "Winner winner, chicken dinner!", Toast.LENGTH_LONG).show();
+        }
+
 
         System.out.println(numberInput.getText().toString());
-        System.out.println(Integer.toString(randomNumber));
+        System.out.println(Integer.toString(randNumber));
 
     }
 
