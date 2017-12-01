@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
         EditText number = (EditText) findViewById(R.id.numberInput);
 
-
+        System.out.println(number.getText().toString());
 
     }
 

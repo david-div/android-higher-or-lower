@@ -10,28 +10,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.dddivilly.higherorlower.MainActivity">
 
-    <EditText
+    <TextView
+        android:text="I'm thinking of a number between 1 and 20."
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="I'm thinking of a number between 1 and 20."
-        android:ems="10"
+        android:id="@+id/textView"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/editText" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Can you guess it?"
-        android:ems="10"
-        android:layout_below="@+id/editText"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="19dp"
-        android:layout_marginStart="19dp"
-        android:id="@+id/editText2" />
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="match_parent"
@@ -39,17 +25,32 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/numberInput"
-        android:layout_below="@+id/editText2"
-        android:layout_centerHorizontal="true"
-        android:hint="Enter number here" />
+        android:hint="Enter number here"
+        android:layout_marginTop="72dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Can you guess it?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp"
+        android:textSize="18sp" />
 
     <Button
         android:text="Guess"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/numberInput"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="13dp"
         android:id="@+id/guessButton"
-        android:onClick="guess" />
+        android:onClick="guess"
+        android:layout_below="@+id/numberInput"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
