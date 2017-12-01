@@ -10,12 +10,16 @@ import java.util.*;
 
 public class MainActivity extends AppCompatActivity {
 
+    int randNumber;
+
+    public void makeToast(String string){
+
+        Toast.makeText(MainActivity.this, string, Toast.LENGTH_SHORT).show();
+
+    }
+
+
     public void guess(View view){
-
-        Random rand = new Random();
-
-        int randNumber = rand.nextInt(20) + 1;
-
 
         EditText numberInput = (EditText) findViewById(R.id.numberInput);
 
@@ -26,20 +30,20 @@ public class MainActivity extends AppCompatActivity {
 
         if (number > randNumber){
 
-            Toast.makeText(MainActivity.this, "Too high!", Toast.LENGTH_LONG).show();
+            makeToast("Lower!");
 
         } else if (number < randNumber){
 
-            Toast.makeText(MainActivity.this, "Too low!", Toast.LENGTH_LONG).show();
+            makeToast("Higher!");
 
         } else {
 
-            Toast.makeText(MainActivity.this, "Winner winner, chicken dinner!", Toast.LENGTH_LONG).show();
+            makeToast("Winner winner, chicken dinner!\nHave another go!");
+
+            Random rand = new Random();
+
+            randNumber = rand.nextInt(20) + 1;
         }
-
-
-        System.out.println(numberInput.getText().toString());
-        System.out.println(Integer.toString(randNumber));
 
     }
 
@@ -47,5 +51,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // generated when the app is launched, rather than each button press
+        // initialised in the class
+
+        Random rand = new Random();
+
+        randNumber = rand.nextInt(20) + 1;
     }
 }
