@@ -1,4 +1,4 @@
-## Higher or Lower?
+## Higher or Lower?
 
 A simple higher or lower game built with Andriod Studio.
 
